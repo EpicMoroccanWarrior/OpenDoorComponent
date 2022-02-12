@@ -27,11 +27,6 @@ public:
 	void OpenDoor(float DeltaTime);
 	void CloseDoor(float DeltaTime);
 
-	float DoorLastOpened = 0.f;
-	float DoorCloseDelay = 2.f;
-	
-
-
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
