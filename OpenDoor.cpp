@@ -43,14 +43,6 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	{ 
 		CloseDoor(DeltaTime);
 	}
-	
-
-		
-	// else
-	// {
-	// 	FinalRotation.Yaw = FMath::FInterpTo(FinalRotation.Yaw,InitialRotation.Yaw,DeltaTime, 2);
-	// 	GetOwner()->SetActorRotation(FinalRotation);
-	// }
 }
 
 void UOpenDoor::OpenDoor(float DeltaTime){
