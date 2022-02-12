@@ -16,9 +16,7 @@ class MYPROJECT9_API UOpenDoor : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UOpenDoor();
-	UPROPERTY(EditAnywhere)
 	FRotator InitialRotation;
-	UPROPERTY(EditAnywhere)
 	FRotator FinalRotation;
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate; 
@@ -26,7 +24,9 @@ public:
 	AActor* ActorThatOpens;
 	void OpenDoor(float DeltaTime);
 	void CloseDoor(float DeltaTime);
-
+	float DoorLastOpened = 0.f;
+	UPROPERTY(EditAnywhere)
+	float DoorCloseDelay = 2.f;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
